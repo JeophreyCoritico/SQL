@@ -34,7 +34,16 @@ Create table BookingPRAC (
     EventYear NUMERIC(4),
     Payment NUMERIC(3),
     DateBooked DATE,
-    Primary Key (ClientID, TourName, EventMonth, EventDay, EventYear));
+    Primary Key (ClientID, TourName, EventMonth, EventDay, EventYear),
+    FOREIGN Key (EventMonth, EventDay, EventYear, TourName) references EventPRAC,
+    FOREIGN Key (ClientID) references ClientPRAC);
 
 
+
+
+SELECT table_catalog [database], table_schema [schema], table_name name, table_type type
+FROM INFORMATION_SCHEMA.TABLES
+--WHERE table_name = 'EventPRAC'
+WHERE table_name LIKE '%PRAC'
+GO
 
