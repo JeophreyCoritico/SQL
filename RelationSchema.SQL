@@ -15,3 +15,5 @@ FK(ClientID, EventYear, EventMonth, EventDay, TourName)
 FK(ClientID) references Client
 FK(EventYear, EventMonth, EventDay, TourName) references Event
 */
+
+/* --- DDL --- */
