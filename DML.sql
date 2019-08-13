@@ -10,7 +10,11 @@ VALUES
 (1, 'Price', 'Taylor', 'M'),
 (102575814, 'Coritico', 'Jeophrey', 'M'),
 (3, 'Croissant', 'Jenny', 'F'),
-(4, 'Crunch', 'Jerome', 'M');
+(4, 'Crunch', 'Jerome', 'M'),
+(5, 'Cookie', 'Jam', 'M'),
+(6, 'Carrot', 'Jane', 'F'),
+(7, 'Cordial', 'Juice', 'F'),
+(8, 'Candy', 'Joe', 'M');
 
 INSERT into EventPRAC(TourName, EventMonth, EventDay, EventYear, EventFee)
 VALUES
@@ -24,8 +28,20 @@ VALUES
 (1, 'North', 'Jan', 9, 2016, 200, '10/12/2015'),
 (102575814, 'South', 'Mar', 22 , 1971, 357, '11/02/1969'),
 (3, 'West', 'Nov', 13 , 1973, 1322, '05/08/1969'),
-(4, 'East', 'Sep', 22 , 2000, 2209, '12/12/1999');
+(4, 'East', 'Sep', 22 , 2000, 2209, '12/12/1999'),
+(5, 'East', 'Sep', 22 , 2000, 2209, '12/12/1999'),
+(6, 'East', 'Sep', 22 , 2000, 2209, '12/12/1999'),
+(7, 'North', 'Jan', 9 , 2016, 200, '12/12/1999'),
+(8, 'South', 'Mar', 22 , 1971, 357, '12/12/1999');
 
-select * from ClientPRAC
+-- ---QUERY 1---
+-- SELECT C.GivenName, C.Surname, B.TourName, T.Description, B.EventYear, B.EventMonth, B.EventDay, E.EventFee, B.DateBooked, B.Payment
+-- from BookingPRAC B
+-- Inner JOIN ClientPRAC C
+-- on B.ClientID = C.ClientID
+-- Inner JOIN EventPRAC E
+-- on E.EventYear = B.EventYear and E.EventMonth = B.EventMonth and E.EventDay = B.EventDay
+-- Inner Join TourPRAC T
+-- on T.TourName = B.TourName
 
-
+-- ---QUERY 2---
