@@ -48,3 +48,9 @@ VALUES
 -- Select EventMonth, TourName, COUNT(ClientID) as NumBookings
 -- from BookingPRAC 
 -- Group by EventMonth, TourName
+
+-- ---QUERY 3---
+-- Select * from BookingPRAC
+-- where Payment > (Select AVG(Payment) from BookingPRAC)
+
+-- Select AVG(Payment) as AveragePayment from BookingPRAC
