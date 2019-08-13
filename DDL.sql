@@ -8,7 +8,7 @@ Create table TourPRAC (
     TourName NVARCHAR(100),
     Description NVARCHAR(500),
     Primary Key (TourName),
-    check(TourName in ('North', 'South')));
+    check(TourName in ('North', 'South', 'East', 'West')));
 
 Create table ClientPRAC (
     ClientID INT,
