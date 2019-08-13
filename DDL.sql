@@ -28,7 +28,7 @@ Create table EventPRAC (
     FOREIGN Key (TourName) references TourPRAC,
     check(EventMonth in ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec')),
     check(EventDay >= 1 and EventDay <= 31),
-    check(EventYear = 4),
+    check(Len(EventYear) = 4),
     check(EventFee >0));
 
 Create table BookingPRAC (
@@ -44,7 +44,7 @@ Create table BookingPRAC (
     FOREIGN Key (ClientID) references ClientPRAC,
     check(EventMonth in ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec')),
     check(EventDay >= 1 and EventDay <= 31),
-    check(EventYear = 4));
+    check(Len(EventYear) = 4));
 
 
 
